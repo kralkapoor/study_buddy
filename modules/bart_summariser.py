@@ -16,7 +16,8 @@ def summarise_text_from_audio_chunks(text_from_audio_chunks, max_tokens):
     # limited array where each element is capped at 1000 tokens for the bart model to summarise
     token_limited_text = []
 
-    for chunk in text_from_audio_chunks:
+    for index, chunk in enumerate(text_from_audio_chunks):
+        print(f'summarising chunk #{index}')
         # break up each element string into new array and build back up
         words = chunk.split(" ")
         s = ""
@@ -38,4 +39,5 @@ def summarise_text_from_audio_chunks(text_from_audio_chunks, max_tokens):
         summary_string += (summary[0]['summary_text'])
 
     #print(summary_string)
+    print("BART summarisations complete")
     return summary_string

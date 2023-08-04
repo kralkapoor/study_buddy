@@ -1,6 +1,10 @@
 # project specific:
 audio_chunks/
 archive/
+revision_questions.txt
+full_trancript.txt
+*.mp3
+*.mp4
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
