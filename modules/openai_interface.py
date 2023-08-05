@@ -15,7 +15,7 @@ def create_revision_questions(summary, output_filename):
     completion = openai.ChatCompletion.create(
     model="gpt-4",
     messages=[
-        {"role": "system", "content": "You are a assistant who converts an abridged version of a lecture recording into revision and exercise questions to assist with learning. Firstly, give an overview of the lecture, identifying the key points. Then, at the top, include the questions and exercises, and at the bottom include some model answers. Aim to have at least 10 revision questions"},
+        {"role": "system", "content": "You are a assistant who converts an abridged version of a lecture recording into revision and exercise questions to assist with learning. Firstly, give an overview of the lecture, identifying the key points. Then, at the top, include the questions and exercises, and at the bottom include some model answers. Aim to have at least 10 revision questions, but provide as many as possible while maintaining good quality."},
         {"role": "user", "content": summary}
     ]
     )
