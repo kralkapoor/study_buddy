@@ -13,6 +13,8 @@ summarizer = pipeline('summarization', model=model, tokenizer=tokenizer)
 
 def summarise_text_from_audio_chunks(text_from_audio_chunks, max_tokens):
     
+    print("\nStarting BART summarisation...")
+    
     # limited array where each element is capped at 1000 tokens for the bart model to summarise
     token_limited_text = []
 
@@ -38,4 +40,5 @@ def summarise_text_from_audio_chunks(text_from_audio_chunks, max_tokens):
         summary_string += (summary[0]['summary_text'])
 
     #print(summary_string)
+    print("Summaries complete")
     return summary_string

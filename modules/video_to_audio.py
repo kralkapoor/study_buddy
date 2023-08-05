@@ -15,7 +15,7 @@ def move_output(output_filename):
 
 def process_video_to_audio():
     input_filename = get_file_path()
-    output_filename = f'{input_filename.split(".")[0]}.mp3'
+    output_filename = f'{input_filename.split(".")[0]}'
     print(f'Processing {input_filename} to mp3...')
     convert_mp4_to_mp3(input_filename, output_filename)
     print('Video to audio processing complete')

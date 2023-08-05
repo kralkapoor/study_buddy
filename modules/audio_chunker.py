@@ -17,7 +17,7 @@ def chunk_audio(file_name):
     while start < length_audio:
         print(f'Chunking part {i}...')
         chunk = audio[start:end]
-        chunk.export(f"audio_chunks/{i}_chunk.mp3", format="mp3")
+        chunk.export(f"audio_chunks/{i}_{file_name}.mp3", format="mp3")
         print(f'Part {i} done\n')
         
         i += 1
