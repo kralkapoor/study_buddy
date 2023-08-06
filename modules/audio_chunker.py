@@ -3,7 +3,7 @@ from pydub import AudioSegment
 def chunk_audio(file_name):
     
     print('Loading mp3 file for chunking...')
-    audio = AudioSegment.from_file(file_name, format="mp3")
+    audio = AudioSegment.from_file(f'{file_name}.mp3', format="mp3")
     length_audio = len(audio)
     print('Done\n')
     
@@ -27,4 +27,4 @@ def chunk_audio(file_name):
     print("Audio chunking completed")
     
 if __name__ == '__main__':
-    chunk_audio('output.mp3')
+    pass
